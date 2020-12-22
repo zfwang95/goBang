@@ -139,6 +139,7 @@ let app = new Vue({
 			for(var k = 0; k < this.count; k++){ // 将可能赢的情况都减1
 			    if(this.wins[this.bNowi][this.bNowj][k]){
 			        this.myWin[k]--;
+					this.bMyWin[k]--;
 			        this.computerWin[k] = this.bCompWin[k];//这个位置对方可能赢
 			    }
 			}
@@ -149,6 +150,7 @@ let app = new Vue({
 			for(var k = 0; k < this.count; k++){ // 将可能赢的情况都减1
 			    if(this.wins[this.bCompi][this.bCompj][k]){
 			        this.computerWin[k]--;
+					this.bCompWin[k]--;
 			        this.myWin[k] = this.bMyWin[k];//这个位置对方可能赢
 			    }
 			}
